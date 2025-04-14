@@ -28,10 +28,10 @@ public class WebServiceConfig extends WsConfigurerAdapter
     }
 
     @Bean(name = "books")
-    public DefaultWsdl11Definition defaultWsdl11Definition(final XsdSchema agentSchema)
+    public DefaultWsdl11Definition defaultWsdl11Definition(final XsdSchema bookSchema)
     {
         final DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setSchema(agentSchema);
+        wsdl11Definition.setSchema(bookSchema);
         wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setPortTypeName("BooksServicePort");
         wsdl11Definition.setTargetNamespace("http://books");
@@ -39,7 +39,7 @@ public class WebServiceConfig extends WsConfigurerAdapter
     }
 
     @Bean
-    public XsdSchema agentSchema()
+    public XsdSchema bookSchema()
     {
         return new SimpleXsdSchema(new ClassPathResource("books.xsd"));
     }
