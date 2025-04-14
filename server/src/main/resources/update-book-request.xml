@@ -1,0 +1,12 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:book="http://books">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <book:updateBookRequest>
+            <book:id>1</book:id>
+            <book:title>Refactoring</book:title>
+            <book:author>Angel</book:author>
+            <book:pages>402</book:pages>
+        </book:updateBookRequest>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

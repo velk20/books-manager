@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://books"
+            xmlns:book="http://books"
+            elementFormDefault="qualified">
+
+    <xsd:element name="getBookRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="title" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getBookResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="book" type="book:book"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="createBookRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="title" type="xsd:string"/>
+                <xsd:element name="author" type="xsd:string"/>
+                <xsd:element name="pages" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="createBookResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="book" type="book:book"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getAllBooksRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getAllBooksResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="books" type="book:book" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="updateBookRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" type="xsd:long"/>
+                <xsd:element name="title" type="xsd:string"/>
+                <xsd:element name="author" type="xsd:string"/>
+                <xsd:element name="pages" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="updateBookResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="book" type="book:book"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="deleteBookRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" type="xsd:long"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="deleteBookResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="string" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="book">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:long"/>
+            <xsd:element name="title" type="xsd:string"/>
+            <xsd:element name="author" type="xsd:string"/>
+            <xsd:element name="pages" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

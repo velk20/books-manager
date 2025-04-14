@@ -1,0 +1,9 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:book="http://books">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <book:getBookRequest>
+            <book:title>Refactoring</book:title>
+        </book:getBookRequest>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
