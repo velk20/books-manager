@@ -31,5 +31,3 @@ Note: You can still send requests using the service only with the following way:
    - delete-book-request.xml
 2. Send the request using Postman or similar and set the method to POST,  
    the Content-Type to text/xml and the body to be of type raw XML
-
-![Screenshot](service/src/main/resources/images/get-agent-example-xml.png)
